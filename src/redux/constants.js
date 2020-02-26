@@ -1,0 +1,1 @@
+export const promiseTypeSuffixes = ['PENDING', 'FULFILLED', 'REJECTED'];

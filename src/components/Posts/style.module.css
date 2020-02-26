@@ -1,0 +1,27 @@
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px;
+  }
+  
+  .center {
+    justify-content: center;
+  }
+  
+  .card {
+    width: 280px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .coverImg {
+    height: 185px;
+    object-fit: cover;
+  }

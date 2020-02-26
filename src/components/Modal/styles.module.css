@@ -1,0 +1,32 @@
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.imgWrapper {
+  padding: 0 8px;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.formItem {
+  margin-bottom: 8px;
+}
+
+.btnWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  margin-left: 8px;
+}
+
+.icon {
+  font-size: 24px;
+}
