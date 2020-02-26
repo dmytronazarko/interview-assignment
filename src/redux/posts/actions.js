@@ -1,4 +1,4 @@
-export const ITEMS_PER_PAGE = 12;
+export const ITEMS_PER_PAGE = 8;
 
 export const getPosts = page => (dispatch, getState, api) => {
   const query = {

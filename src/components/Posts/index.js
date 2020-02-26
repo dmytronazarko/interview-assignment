@@ -1,27 +1,18 @@
 import React, {useEffect} from 'react';
 import cs from 'classnames';
 import {connect} from 'react-redux';
-import {Card, Icon, Spin, Pagination} from 'antd';
+import {Card, Icon, Pagination} from 'antd';
 
-import {getPosts, deletePost, setSelectedPost} from '../../redux/posts/actions';
+import {getPosts, deletePost, setSelectedPost, ITEMS_PER_PAGE} from '../../redux/posts/actions';
 import s from './style.module.css';
 
 const TOTAL_NUMBER_OF_POSTS = 950;
-const ITEMS_PER_PAGE = 12;
 
 function Posts(props) {
   const {posts, page, loading, getPosts, deletePost, setSelectedPost} = props;
   useEffect(() => {
     getPosts(page);
   }, [page]);
-
-  if (loading) {
-    return (
-      <div className={cs(s.row, s.center)}>
-        <Spin size="large" />
-      </div>
-    );
-  }
 
   return (
     <>
@@ -38,6 +29,7 @@ function Posts(props) {
               const {image, description: title} = mediaItem;
               return (
                 <Card
+                  loading={loading}
                   key={id}
                   className={s.card}
                   cover={
