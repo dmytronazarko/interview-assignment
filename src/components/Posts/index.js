@@ -12,7 +12,7 @@ function Posts(props) {
   const {posts, page, loading, getPosts, deletePost, setSelectedPost} = props;
   useEffect(() => {
     getPosts(page);
-  }, [page]);
+  }, []);
 
   return (
     <>
